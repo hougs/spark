@@ -32,14 +32,6 @@ To write a Spark application, you need to add a Maven dependency on Spark. Spark
     artifactId = spark-core_{{site.SCALA_BINARY_VERSION}}
     version = {{site.SPARK_VERSION}}
 
-In addition, if you wish to access an HDFS cluster, you need to add a dependency on
-`hadoop-client` for your version of HDFS. Some common HDFS version tags are listed on the
-[third party distributions](hadoop-third-party-distributions.html) page.
-
-    groupId = org.apache.hadoop
-    artifactId = hadoop-client
-    version = <your-hdfs-version>
-
 Finally, you need to import some Spark classes and implicit conversions into your program. Add the following lines:
 
 {% highlight scala %}
@@ -63,14 +55,6 @@ To write a Spark application in Java, you need to add a dependency on Spark. Spa
     artifactId = spark-core_{{site.SCALA_BINARY_VERSION}}
     version = {{site.SPARK_VERSION}}
 
-In addition, if you wish to access an HDFS cluster, you need to add a dependency on
-`hadoop-client` for your version of HDFS. Some common HDFS version tags are listed on the
-[third party distributions](hadoop-third-party-distributions.html) page.
-
-    groupId = org.apache.hadoop
-    artifactId = hadoop-client
-    version = <your-hdfs-version>
-
 Finally, you need to import some Spark classes into your program. Add the following lines:
 
 {% highlight scala %}
@@ -89,12 +73,6 @@ so C libraries like NumPy can be used.
 To run Spark applications in Python, use the `bin/spark-submit` script located in the Spark directory.
 This script will load Spark's Java/Scala libraries and allow you to submit applications to a cluster.
 You can also use `bin/pyspark` to launch an interactive Python shell.
-
-If you wish to access HDFS data, you need to use a build of PySpark linking
-to your version of HDFS. Some common HDFS version tags are listed on the
-[third party distributions](hadoop-third-party-distributions.html) page.
-[Prebuilt packages](http://spark.apache.org/downloads.html) are also available on the Spark homepage
-for common HDFS versions.
 
 Finally, you need to import some Spark classes into your program. Add the following lines:
 
